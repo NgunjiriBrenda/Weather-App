@@ -34,6 +34,13 @@ const formatTime = (timestamp) => {
     });
 };
 
-//get
+//get wind direction from degrees
+const getWindDirection = (degrees) => {
+    const directions = ['N', 'NE', 'E', 'SE', 'S', 'SW', 'W', 'NW'];
+    const index = Math.round(degrees / 45) % 8;
+    return directions[index];
+};
+
+
 }
 
